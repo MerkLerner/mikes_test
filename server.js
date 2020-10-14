@@ -9,6 +9,11 @@ app.get('/', function(req, res){
     res.sendFile(filepath)
 })
 
+app.get('/favorites', function(req,res){
+	let filepath = path.join(__dirname, 'favorites.html')
+    res.sendFile(filepath)
+})
+
 app.listen(PORT, function(){
 	console.log(`running on port ${PORT}`)
 })
