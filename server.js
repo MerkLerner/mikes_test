@@ -14,8 +14,12 @@ app.get('/favorites', function(req,res){
     res.sendFile(filepath)
 })
 
+app.get('/blog', function(req,res){
+	let filepath = path.join(__dirname, 'thoughts.html')
+    res.sendFile(filepath)
+})
+
 app.listen(PORT, function(){
 	console.log(`running on port ${PORT}`)
 })
-
 
